@@ -1,4 +1,4 @@
-export default interface IPage  {
-    id: number;
-    title: string;
-  }
+export default interface IPage {
+  id: number;
+  title: string;
+}

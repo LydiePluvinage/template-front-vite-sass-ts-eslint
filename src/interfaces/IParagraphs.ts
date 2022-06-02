@@ -1,5 +1,5 @@
-export default interface IParagraphs  {
-    id: number;
-    idPage: number;
-    description: string;
-  }
+export default interface IParagraphs {
+  id: number;
+  idPage: number;
+  description: string;
+}
