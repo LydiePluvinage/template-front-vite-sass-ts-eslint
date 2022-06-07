@@ -1,5 +1,6 @@
-import React from 'react';
 import '../../sass/homepage/_landingpage';
+
+import React from 'react';
 
 const LandingPage = () => {
   return <div>Landing</div>;
