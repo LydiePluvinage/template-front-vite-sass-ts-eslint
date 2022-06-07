@@ -8,5 +8,4 @@ export default interface IUser {
   created: Date;
   phone: number;
   modified: Date;
-  
 }
