@@ -1,5 +1,6 @@
-import React from 'react';
 import '../sass/homepage/_homepage';
+
+import React from 'react';
 
 const Homepage = () => {
   return <div>homepage</div>;
