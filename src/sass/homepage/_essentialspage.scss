@@ -1,0 +1,55 @@
+.essentialsPage {
+  background-color: rgba(233, 246, 242, 1);
+
+  h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding: 5%;
+  }
+  h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: 480px 480px 480px;
+  grid-template-rows: 300px 300px 300px;
+  grid-auto-flow: row;
+  grid-template-areas: 'first second third';
+}
+
+.first {
+  grid-area: first;
+  background-color: rgb(220, 239, 234);
+}
+
+.second {
+  grid-area: second;
+  background-color: rgba(204, 234, 226, 1);
+}
+
+.third {
+  grid-area: third;
+  background-color: rgba(165, 227, 210, 1);
+}
+#firstbag {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+#secondbag {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 15%;
+}
+#thirdbag {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 37.5%;
+}

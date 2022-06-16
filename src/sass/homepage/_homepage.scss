@@ -1,0 +1,23 @@
+.homePage {
+  display: flex;
+  width: auto;
+  h3 {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 3;
+    font-family: 'Satisfy', cursive;
+    font-size: 70px;
+    letter-spacing: 6px;
+  }
+  #logo {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+}
