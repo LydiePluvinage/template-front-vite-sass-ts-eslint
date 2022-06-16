@@ -9,7 +9,14 @@ const LandingPage = () => {
   const videoSrc = '../assets/video/hpvideo.mp4';
   return (
     <div className="landingpage">
-      <ReactPlayer url={videoSrc} width="100%" height="auto" playing loop />
+      <ReactPlayer
+        url={videoSrc}
+        width="100%"
+        height="auto"
+        playing={true}
+        loop={true}
+        mute
+      />
       <EssentialsPage />
     </div>
   );
