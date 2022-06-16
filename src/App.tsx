@@ -4,21 +4,21 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Footer from '../src/components/globals/Footer';
+import Navbar from './components/globals/Navbar';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
     <div className="App">
+      <Homepage />
       <Router>
+        <Navbar />
         <Routes>
-          <Route path="*" element={0} />
-          <Route path="/home" element={0} />
-          <Route path="/about" element={0} />
-          <Route path="/eshop" element={0} />
-          <Route path="/home" element={0} />
+          <Route path="*" element={<Homepage />} />
+          <Route path="/home" element={<Homepage />} />
         </Routes>
-
-        <Footer />
       </Router>
+      <Footer />
     </div>
   );
 }
