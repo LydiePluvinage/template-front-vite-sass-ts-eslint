@@ -20,8 +20,8 @@ const About = () => {
           {' '}
           <img id="wool" src="./assets/images/laine.png" alt="laine" />
         </div>
-        <h4 className="fifth">descriptif des matériaux </h4>
-        <h4 className="fourth">l&apos;atelier</h4>
+        <h4 className="fifth">l&apos;atelier</h4>
+        <h4 className="fourth">descriptif des matériaux </h4>
         <div className="sixth">
           {' '}
           <img id="workshop" src="./assets/images/atelier.png" alt="atelier" />
