@@ -12,15 +12,15 @@ const Navbar = () => {
           {/* Nav: Left Side*/}
           <div className="navbar__ul__container">
             {navlinks &&
-              navlinks.map(({ id, name1, path, title1, title2 }) => (
+              navlinks.map(({ id, leftTitle, path, firstDropTitle, secondDropTitle }) => (
                 <NavLink key={id} to={path}>
-                  <li className="navbar__li">{name1}</li>
+                  <li className="navbar__li">{leftTitle}</li>
                   <div className="navbar__dropdownContent">
                     <Link to="" className="navbar__dropdownContent__titles">
-                      {title1}
+                      {firstDropTitle}
                     </Link>
                     <Link to="" className="navbar__dropdownContent__titles">
-                      {title2}
+                      {secondDropTitle}
                     </Link>
                   </div>
                 </NavLink>
@@ -30,9 +30,9 @@ const Navbar = () => {
           {/* Nav : Right Side >>> NON TERMINEE*/}
           <div className="navbar__ul__container">
             {navlinks &&
-              navlinks.map(({ id, name2, path }) => (
+              navlinks.map(({ id, rightTitle, path }) => (
                 <NavLink key={id} to={path}>
-                  <li className="navbar__li">{name2}</li>
+                  <li className="navbar__li">{rightTitle}</li>
                 </NavLink>
               ))}
           </div>

@@ -5,12 +5,12 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import Footer from '../src/components/globals/Footer';
 import Navbar from '../src/components/globals/Navbar';
-import Collection from './pages/Collection';
-import Homepage from './pages/Homepage';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
+import Collection from './pages/Collection';
+import Contact from './pages/Contact';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
