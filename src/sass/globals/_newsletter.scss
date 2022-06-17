@@ -1,18 +1,11 @@
 .newsletter{
     background: #f1f1f1;
-    padding:2rem 16vw;
-  
+    padding:2rem 16vw; 
 }
-// .newsletter h2{
-//     display:flex;
-//     flex-direction:column;
-// }
+
 .newsletter form{
     margin : 20px 0 ;
     display:flex;
-    
-   
-    
 }
 .newsletter form input{
     height :40px;
@@ -30,6 +23,4 @@
     color :white;
     background-color: red;
     border:none;
-  
-
 }
