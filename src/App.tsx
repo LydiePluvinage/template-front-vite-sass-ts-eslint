@@ -6,7 +6,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Footer from '../src/components/globals/Footer';
 import Navbar from '../src/components/globals/Navbar';
 import Collection from './pages/Collection';
-import Homepage from './pages/Homepage';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <HashRouter>
         <Navbar />
         <Routes>
-          <Route path="*" element={<Homepage />} />
-          <Route path="/home" element={<Homepage />} />
+          <Route path="*" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
           <Route path="/collection" element={<Collection />} />
         </Routes>
         <Footer />
