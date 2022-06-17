@@ -10,7 +10,7 @@ import Account from './pages/Account';
 import Cart from './pages/Cart';
 import Collection from './pages/Collection';
 import Contact from './pages/Contact';
-import Homepage from './pages/Homepage';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
       <HashRouter>
         <Navbar />
         <Routes>
-          <Route path="*" element={<Homepage />} />
-          <Route path="/home" element={<Homepage />} />
+          <Route path="*" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/univers" element={<About />} />
           <Route path="/contact" element={<Contact />} />
