@@ -1,7 +1,7 @@
-// import de l'interface pour typescript
+// Interface import declaration
 import { INavlink } from './../src/interfaces/INavlink';
 
-// Datas for the menu items
+// Datas to map in the navbar
 const navLinks: INavlink[] = [
   {
     id: 1,
