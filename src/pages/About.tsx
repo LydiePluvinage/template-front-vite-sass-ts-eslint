@@ -5,7 +5,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="about">
-      <h4> Engagé pour l&apos;environement</h4>
+      <h4> Engagé pour l&apos;environnement</h4>
       <h2> Découvrez Brille</h2>
       <div className="about__container">
         {/* {aboutBrille &&
