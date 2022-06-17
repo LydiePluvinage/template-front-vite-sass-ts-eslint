@@ -1,28 +1,36 @@
+// Datas for the menu items
 const navLinks = [
   {
     id: 1,
-    path: '/home',
-    title: 'Accueil',
+    path: '/collection',
+    name1: 'Nos sacs',
+    title1: 'Pour tous les jours',
+    title2: 'Pour une soirée élégante',
   },
   {
     id: 2,
-    path: '/destination',
-    title: 'Destinations',
+    path: '/univers',
+    name1: 'Univers Brille',
   },
   {
     id: 3,
-    path: '/ships',
-    title: 'Vaisseaux',
+    path: '/contact',
+    name1: 'Contact',
   },
   {
     id: 4,
-    path: '/booking',
-    title: 'Reservation',
+    path: '',
+    name2: 'Rechercher',
   },
   {
     id: 5,
-    path: '/contact',
-    title: 'Contact',
+    path: '/compte',
+    name2: 'Compte',
+  },
+  {
+    id: 6,
+    path: '/panier',
+    name2: 'Panier',
   },
 ];
 

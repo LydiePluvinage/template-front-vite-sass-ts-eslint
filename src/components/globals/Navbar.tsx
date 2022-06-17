@@ -1,6 +1,8 @@
 import '../../sass/globals/_navbar.scss';
+
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 import navlinks from '../../../data/navLinks';
 
 const Navbar = () => {
@@ -9,12 +11,33 @@ const Navbar = () => {
       {/* NAVBAR */}
       <nav className="navbar">
         <ul className="navbar__ul">
-          {navlinks &&
-            navlinks.map(({ id, name }) => {
-              <NavLink key={id} to="/home">
-                <li className="navbar__li">{name}</li>;
-              </NavLink>;
-            })}
+          {/* Nav: Left Side*/}
+          <div className="navbar__ul__container">
+            {navlinks &&
+              navlinks.map(({ id, name1, path, title1, title2 }) => (
+                <NavLink key={id} to={path}>
+                  <li className="navbar__li">{name1}</li>
+                  <div className="navbar__dropdown-content">
+                    <Link to="" className="navbar__dropdown-content__titles">
+                      {title1}
+                    </Link>
+                    <Link to="" className="navbar__dropdown-content__titles">
+                      {title2}
+                    </Link>
+                  </div>
+                </NavLink>
+              ))}
+          </div>
+
+          {/* Nav : Right Side >>> NON TERMINEE*/}
+          <div className="navbar__ul__container">
+            {navlinks &&
+              navlinks.map(({ id, name2, path }) => (
+                <NavLink key={id} to={path}>
+                  <li className="navbar__li">{name2}</li>
+                </NavLink>
+              ))}
+          </div>
         </ul>
       </nav>
     </div>

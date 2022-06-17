@@ -12,13 +12,12 @@ footer{
    
 }
 .container_footer{
-    width : 100%;
-    margin: 0 auto;
+    
     display: flex;
     justify-content: center;
-    
+    margin: 0 auto;
+    width : 100%;
     align-items: flex-start;
-    font-size:20px;
     padding: 3rem 3rem ;
 
 }
@@ -26,10 +25,7 @@ footer{
 .container_footer_center,
 .container_footer_right{
     margin:0 auto;
-    list-style-type: none;
-    
-
-    
+    list-style-type: none;   
 }
 
 .container_footer_left a,
