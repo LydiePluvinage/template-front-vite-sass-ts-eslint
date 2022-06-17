@@ -1,4 +1,4 @@
-import '../../sass/globals/_navbar';
+import '../../sass/globals/_navbar.scss';
 
 import React from 'react';
 

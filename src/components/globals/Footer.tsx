@@ -6,13 +6,13 @@ import Newsletter from './Newsletter';
 
 const Footer = () => {
   return (
-    <div className="container">
+    <div className="container_bas">
       <Newsletter />
 
       <footer>
         <div className="container_footer">
-          <ul className="container_footer_left">
-            {/* <li>
+          {/* <ul className="container_footer_left">
+            <li>
               <a href="#">Nous contacter</a>
             </li>
             <li>
@@ -39,8 +39,8 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">Facebook</a>
-            </li> */}
-          </ul>
+            </li>
+          </ul> */}
         </div>
       </footer>
     </div>
