@@ -1,5 +1,3 @@
-import '../../sass/homepage/_essentialspage.scss';
-
 import React from 'react';
 
 const EssentialsPage = () => {
