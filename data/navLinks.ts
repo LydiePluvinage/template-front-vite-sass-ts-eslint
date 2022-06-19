@@ -7,18 +7,21 @@ const navLinks: INavlink[] = [
     id: 1,
     path: '/collection',
     leftTitle: 'Nos sacs',
+    responsiveTitle: 'Nos sacs',
     dropdown: true,
   },
   {
     id: 2,
     path: '/univers',
     leftTitle: 'Univers Brille',
+    responsiveTitle: 'Univers Brille',
     dropdown: true,
   },
   {
     id: 3,
     path: '/contact',
     leftTitle: 'Contact',
+    responsiveTitle: 'Contact',
     dropdown: false,
   },
   {
@@ -31,12 +34,14 @@ const navLinks: INavlink[] = [
     id: 5,
     path: '/compte',
     rightTitle: 'Compte',
+    responsiveTitle: 'Compte',
     dropdown: false,
   },
   {
     id: 6,
     path: '/panier',
     rightTitle: 'Panier',
+    responsiveTitle: 'Panier',
     dropdown: false,
   },
 ];

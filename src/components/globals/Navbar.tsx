@@ -1,38 +1,85 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 
+// ----- Hamburger-React Icons -----
+import { Sling as Hamburger } from 'hamburger-react';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
+// ----- Package components -----
+// import { HideBetween } from 'react-hide-on-scroll';
+// ----- datas -----
 import navlinks from '../../../data/navLinks';
+// ----- Component -----
 import Dropdown from './Dropdown';
 
 const Navbar = () => {
+  // STATE (manage the hamburger menu)
+  const [isOpened, setIsOpened] = useState(false);
+
+  // FUNCTIONS (manage the hamburger menu)
+  const closeMenu = () => {
+    setIsOpened(false);
+  };
+
   return (
-    <nav className="navbar">
-      {/* NAVBAR */}
-      <ul className="navbar__ul">
-        {/* Nav: Left Side*/}
-        <div className="navbar__ul__container">
-      <div className="navbar__dropdown">
-        <Dropdown />
-      </div>
-          {navlinks &&
-            navlinks.map(({ id, leftTitle, path }) => (
-              <NavLink key={id} to={path}>
-                <li className="navbar__li">{leftTitle}</li>
-              </NavLink>
-            ))}
+    <div>
+      <nav className="navbar">
+        {/* ---- NAVBAR ---- */}
+        <ul className="navbar__ul">
+          {/* >> Nav: Left Side*/}
+          <div className="navbar__ul__container">
+            <div className="navbar__dropdown">
+              <Dropdown />
+            </div>
+            {navlinks &&
+              navlinks.map(({ id, leftTitle, path }) => (
+                <NavLink key={id} to={path}>
+                  <li className="navbar__li">{leftTitle}</li>
+                </NavLink>
+              ))}
+          </div>
+
+          {/* >> Nav : Right Side */}
+          <div className="navbar__ul__container">
+            {navlinks &&
+              navlinks.map(({ id, rightTitle, path }) => (
+                <NavLink key={id} to={path}>
+                  <li className="navbar__li">{rightTitle}</li>
+                </NavLink>
+              ))}
+          </div>
+        </ul>
+
+        {/* ----- Hamburger logic ----- */}
+        <div role="button" className="hamburger">
+          <Hamburger
+            toggled={isOpened}
+            toggle={setIsOpened}
+            distance="md"
+            size={25}
+            duration={0.5}
+            color={isOpened ? '#ffffff' : '#0d6e53'}
+            easing="ease-in"
+            label="montre le menu"
+            hideOutline={true}
+          />
         </div>
 
-        {/* Nav : Right Side */}
-        <div className="navbar__ul__container">
+        {/* ----- MOBILE MENU ----- */}
+        <ul className={!isOpened ? 'hiddenMenu' : 'showMenu'}>
           {navlinks &&
-            navlinks.map(({ id, rightTitle, path }) => (
-              <NavLink key={id} to={path}>
-                <li className="navbar__li">{rightTitle}</li>
-              </NavLink>
+            navlinks.map(({ id, responsiveTitle, path }) => (
+              <div role="button" tabIndex={0} onClick={closeMenu} key={id}>
+                <li className="hamburgerList">
+                  <Link to={path} onClick={closeMenu}>
+                    <p className="hamburgerList__title">{responsiveTitle}</p>
+                  </Link>
+                </li>
+              </div>
             ))}
-        </div>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

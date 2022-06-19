@@ -3,5 +3,6 @@ export interface INavlink {
   path: string;
   leftTitle?: string;
   rightTitle?: string;
+  responsiveTitle?: string;
   dropdown: boolean;
 }

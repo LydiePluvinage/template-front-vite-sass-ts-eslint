@@ -1,15 +1,20 @@
 .navbar {
   position: absolute;
   min-width: 100%;
-  z-index: 3;
+  z-index: 11;
 
   &__ul {
     position: relative;
     min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     outline: none;
     padding: 2rem;
+
+    @media all and (max-width: 1020px) {
+      display: none;
+    }
 
     &__container {
       width: 40%;
@@ -22,7 +27,7 @@
   }
 
   &__li {
-    display: none;
+    // display: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,13 +36,11 @@
 
     &:hover {
       cursor: pointer;
-      color: white;
+      color: #ffffff;
     }
   }
-  &:hover .navbar__dropdown {
-    display: block;
-  }
 
+  // dropdown-menu position & list-style
   &__dropdown {
     display: none;
     position: absolute;
@@ -49,7 +52,68 @@
     li {
       margin-top: 1rem;
       &:hover {
-        color: white;
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Burger menu position
+  .hamburger {
+    position: absolute;
+    max-width: 20%;
+    right: 0;
+    display: none;
+    display: flex;
+    justify-content: end;
+    top: 1.3rem;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    padding-right: 2rem;
+
+    @media all and (min-width: 1020px) {
+      display: none;
+    }
+  }
+
+  // Hide the burger menu
+  .hiddenMenu {
+    display: none;
+  }
+
+  // Reveal the burger menu
+  .showMenu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    padding-top: 2rem;
+    top: 0;
+    left: 0;
+    background: rgb(0, 50, 84);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 50, 84, 1) 0%,
+      rgba(9, 121, 91, 0.14936396922050066) 49%,
+      rgb(0, 88, 105) 100%
+    );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.2px);
+  }
+
+  .hamburgerList {
+    &__title {
+      transition: all 0.3s ease-in-out;
+      @media all and (max-width: 425px) {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        color: #ffffff;
       }
     }
   }
