@@ -1,7 +1,9 @@
+// >> Global Navbar
 .navbar {
-  position: absolute;
   min-width: 100%;
-  z-index: 11;
+  transition: all 0.1s linear;
+  position: fixed;
+  z-index: 2000;
 
   &__ul {
     position: relative;
@@ -11,6 +13,10 @@
     align-items: center;
     outline: none;
     padding: 2rem;
+
+    &:hover .navbar__dropdown {
+      display: block;
+    }
 
     @media all and (max-width: 1020px) {
       display: none;
@@ -27,7 +33,7 @@
   }
 
   &__li {
-    // display: none;
+    display: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,12 +46,12 @@
     }
   }
 
-  // dropdown-menu position & list-style
+  // ! Dropdown-menu position & list-style
   &__dropdown {
     display: none;
     position: absolute;
     min-width: 100%;
-    top: 1.5rem;
+    top: 1.4rem;
     z-index: 3;
     transition: all 2s ease-in-out;
 
@@ -57,7 +63,24 @@
     }
   }
 
-  // Burger menu position
+  // &__hide {
+  //   position: absolute;
+  //   min-width: 100%;
+  //   top: 1.5rem;
+  //   z-index: 3;
+  //   transition: all 2s ease-in-out;
+
+  //   li {
+  //     margin-top: 1rem;
+  //     &:hover {
+  //       color: #ffffff;
+  //     }
+  //   }
+  // }
+
+  // ! hide the dropdown menu
+
+  // ! Burger menu position
   .hamburger {
     position: absolute;
     max-width: 20%;
@@ -76,12 +99,12 @@
     }
   }
 
-  // Hide the burger menu
+  // ! Hide the burger menu
   .hiddenMenu {
     display: none;
   }
 
-  // Reveal the burger menu
+  // ! Reveal the burger menu
   .showMenu {
     position: fixed;
     width: 100%;
@@ -106,6 +129,7 @@
     backdrop-filter: blur(10.2px);
   }
 
+  // ! Hamburger menu attributes
   .hamburgerList {
     &__title {
       transition: all 0.3s ease-in-out;

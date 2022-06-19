@@ -15,7 +15,7 @@ const navLinks: INavlink[] = [
     path: '/univers',
     leftTitle: 'Univers Brille',
     responsiveTitle: 'Univers Brille',
-    dropdown: true,
+    dropdown: false,
   },
   {
     id: 3,
