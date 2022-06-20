@@ -1,16 +1,11 @@
 import React from 'react';
 
-// import aboutBrille from '../../data/aboutBrille';
-
 const About = () => {
   return (
     <div className="about">
       <h4> Engagé pour l&apos;environnement</h4>
       <h2> Découvrez Brille</h2>
       <div className="about__container">
-        {/* {aboutBrille &&
-          aboutBrille.map(({ id, image }) => ( */}
-        {/* <div className="about__container__cards" key={id}> */}
         <h4 className="first"> descriptif de la marque</h4>
         <div className="second">
           {' '}
@@ -32,9 +27,7 @@ const About = () => {
         </div>
         <h4 className="eighth">engagé pour notre planète</h4>
       </div>
-      {/* ))} */}
     </div>
-    // </div>
   );
 };
 
