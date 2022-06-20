@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EssentialsPage = () => {
+const Essentials = () => {
   return (
     <div className="essentialsPage">
       <div>
@@ -24,4 +24,4 @@ const EssentialsPage = () => {
   );
 };
 
-export default EssentialsPage;
+export default Essentials;

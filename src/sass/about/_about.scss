@@ -1,0 +1,82 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(236, 244, 246, 1);
+  &__container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 600px);
+    grid-template-rows: 600px 600px 600px 600px 600px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'first second .'
+      'third fourth .'
+      'fifth sixth .'
+      'seventh eighth .';
+  }
+  h4 {
+    margin-top: 100px;
+  }
+  h2 {
+    margin-bottom: 80px;
+  }
+  .first {
+    grid-area: first;
+    background-color: rgba(236, 244, 246, 1);
+    text-align: center;
+  }
+
+  .second {
+    grid-area: second;
+  }
+
+  .third {
+    grid-area: third;
+  }
+
+  .fifth {
+    grid-area: fifth;
+    background-color: rgba(236, 244, 246, 1);
+  }
+
+  .fourth {
+    grid-area: fourth;
+    background-color: rgba(236, 244, 246, 1);
+  }
+
+  .sixth {
+    grid-area: sixth;
+  }
+
+  .seventh {
+    grid-area: seventh;
+    background-color: rgba(236, 244, 246, 1);
+  }
+
+  .eighth {
+    grid-area: eighth;
+  }
+  #tissus {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+  #wool {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+  #workshop {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+  #nature {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+}

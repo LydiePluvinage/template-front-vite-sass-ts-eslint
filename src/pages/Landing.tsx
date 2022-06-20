@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
-import EssentialsPage from '../components/homepage/EssentialsPage';
-// Executer NPM install pour recuperer react player //
-const LandingPage = () => {
+import Essentials from '../components/homepage/Essentials';
+
+const Landing = () => {
   const videoSrc = '../assets/video/hpvideo.mp4';
   return (
     <div className="landingPage">
-      <h3> Brille </h3>
+      <div className="fade">
+        <h3> Brille </h3>
+      </div>
       <img
         id="logo"
         src="../assets/images/logo_scroll.svg"
@@ -19,10 +21,11 @@ const LandingPage = () => {
         height="screen"
         playing={true}
         loop={true}
+        muted={true}
       />
-      <EssentialsPage />
+      <Essentials />
     </div>
   );
 };
 
-export default LandingPage;
+export default Landing;
