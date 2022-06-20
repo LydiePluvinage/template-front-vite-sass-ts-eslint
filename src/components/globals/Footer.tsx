@@ -9,7 +9,7 @@ const Footer = () => {
 
       <footer>
         <div className="container_footer">
-          {/* <ul className="container_footer_left">
+          <ul className="container_footer_left">
             <li>
               <a href="#">Nous contacter</a>
             </li>
@@ -38,7 +38,7 @@ const Footer = () => {
             <li>
               <a href="#">Facebook</a>
             </li>
-          </ul> */}
+          </ul>
         </div>
       </footer>
     </div>
