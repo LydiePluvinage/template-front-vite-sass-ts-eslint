@@ -3,81 +3,38 @@
   flex-direction: column;
   text-align: center;
   background-color: rgba(236, 244, 246, 1);
-  &__container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 600px);
-    grid-template-rows: 600px 600px 600px 600px 600px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      'first second .'
-      'third fourth .'
-      'fifth sixth .'
-      'seventh eighth .';
-  }
   h4 {
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 10%;
+    cursor: pointer;
+    &:hover {
+      opacity: 0;
+    }
+    &__:hover + &__:paragraph {
+      opacity: 1;
+    }
   }
   h2 {
-    margin-bottom: 80px;
+    margin-bottom: 5%;
   }
-  .first {
-    grid-area: first;
-    background-color: rgba(236, 244, 246, 1);
-    text-align: center;
-    vertical-align: middle;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    &__test {
+      display: flex;
+      width: 100%;
+      &__title {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &__paragraph {
+      display: none;
+    }
   }
-
-  .second {
-    grid-area: second;
-  }
-
-  .third {
-    grid-area: third;
-  }
-
-  .fifth {
-    grid-area: fifth;
-    background-color: rgba(236, 244, 246, 1);
-  }
-
-  .fourth {
-    grid-area: fourth;
-    background-color: rgba(236, 244, 246, 1);
-  }
-
-  .sixth {
-    grid-area: sixth;
-  }
-
-  .seventh {
-    grid-area: seventh;
-    background-color: rgba(236, 244, 246, 1);
-  }
-
-  .eighth {
-    grid-area: eighth;
-  }
-  #tissus {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-  }
-  #wool {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-  }
-  #workshop {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-  }
-  #nature {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-  }
+}
+#aboutImg {
+  width: 50%;
 }
