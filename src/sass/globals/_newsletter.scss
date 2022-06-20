@@ -1,11 +1,26 @@
 .newsletter {
   background: #f1f1f1;
   padding: 2rem 16vw;
+  @media screen and (min-width: 300px) and (max-width: 1020px) {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+  
 }
 
 .newsletter form {
   margin: 20px 0;
   display: flex;
+  @media screen and (min-width: 300px) and (max-width: 1020px) {
+  
+    display: flex;
+    flex-direction: column;  
+  }
+  
+ 
 }
 .newsletter form input {
   height: 40px;
@@ -15,6 +30,11 @@
   background: #f1f1f1;
   border: none;
   border-bottom: 1px solid #000;
+  margin-right: 20px;
+  @media screen and (min-width: 300px) and (max-width: 1020px) {
+    margin-bottom: 20px; 
+  }
+  
 }
 .newsletter form button {
   height: 40px;
@@ -22,4 +42,5 @@
   color: white;
   background-color: red;
   border: none;
+  
 }
