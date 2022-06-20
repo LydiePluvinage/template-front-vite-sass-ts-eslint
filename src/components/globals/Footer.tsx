@@ -7,10 +7,8 @@ const Footer = () => {
     <div>
       <Newsletter />
       <footer>
-
         <div className="container__footer">
           <ul>
-
             <li>
               <a target="_blank" href="https://www.google.fr/" rel="noreferrer">
                 Nous contacter
