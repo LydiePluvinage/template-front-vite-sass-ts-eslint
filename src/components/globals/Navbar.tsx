@@ -1,43 +1,96 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+// ----- Package components -----
+import 'react-js-stickynav/dist/index.css';
+
+// ----- Hamburger-React Icons -----
+import { Sling as Hamburger } from 'hamburger-react';
+import React, { useState } from 'react';
+import { StickyNav } from 'react-js-stickynav';
+import Fade from 'react-reveal/Fade';
 import { Link, NavLink } from 'react-router-dom';
 
+// ----- datas -----
 import navlinks from '../../../data/navLinks';
+// ----- Component -----
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
+  // STATE (manage the hamburger menu)
+  const [isOpened, setIsOpened] = useState(false);
+
+  // FUNCTIONS (manage the hamburger menu)
+  const closeMenu = () => {
+    setIsOpened(false);
+  };
+
   return (
     <div>
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <ul className="navbar__ul">
-          {/* Nav: Left Side*/}
-          <div className="navbar__ul__container">
-            {navlinks &&
-              navlinks.map(({ id, leftTitle, path, firstDropTitle, secondDropTitle }) => (
-                <NavLink key={id} to={path}>
-                  <li className="navbar__li">{leftTitle}</li>
-                  <div className="navbar__dropdownContent">
-                    <Link to="" className="navbar__dropdownContent__titles">
-                      {firstDropTitle}
-                    </Link>
-                    <Link to="" className="navbar__dropdownContent__titles">
-                      {secondDropTitle}
-                    </Link>
-                  </div>
-                </NavLink>
-              ))}
-          </div>
+      <StickyNav>
+        <nav className="navbar">
+          {/* ---- NAVBAR ---- */}
+          <ul className="navbar__ul">
+            {/* >> Nav: Left Side*/}
+            <div className="navbar__ul__container">
+              <div className="navbar__dropdown">
+                <Fade clear>
+                  <Dropdown />
+                </Fade>
+              </div>
+              {navlinks &&
+                navlinks.map(({ id, leftTitle, path }) => (
+                  <NavLink key={id} to={path}>
+                    <li className="navbar__li">{leftTitle}</li>
+                  </NavLink>
+                ))}
+            </div>
 
-          {/* Nav : Right Side */}
-          <div className="navbar__ul__container">
-            {navlinks &&
-              navlinks.map(({ id, rightTitle, path }) => (
-                <NavLink key={id} to={path}>
-                  <li className="navbar__li">{rightTitle}</li>
-                </NavLink>
-              ))}
+            <Link to="/home">
+              <div className="logoContainer">
+                <img src="/assets/images/closeHamburgerMenu.svg" alt="" />
+                <p className="logoContainer__text">(LOGO)</p>
+              </div>
+            </Link>
+
+            {/* >> Nav : Right Side */}
+            <div className="navbar__ul__container">
+              {navlinks &&
+                navlinks.map(({ id, rightTitle, path }) => (
+                  <NavLink key={id} to={path}>
+                    <li className="navbar__li">{rightTitle}</li>
+                  </NavLink>
+                ))}
+            </div>
+          </ul>
+
+          {/* ----- Hamburger logic ----- */}
+          <div role="button" className="hamburger">
+            <Hamburger
+              toggled={isOpened}
+              toggle={setIsOpened}
+              distance="md"
+              size={25}
+              duration={0.5}
+              color={isOpened ? '#ffffff' : '#0d6e53'}
+              easing="ease-in"
+              label="montre le menu"
+              hideOutline={true}
+            />
           </div>
-        </ul>
-      </nav>
+          {/* ----- MOBILE MENU ----- */}
+          <ul className={!isOpened ? 'hiddenMenu' : 'showMenu'}>
+            {navlinks &&
+              navlinks.map(({ id, responsiveTitle, path }) => (
+                <div role="button" tabIndex={0} onClick={closeMenu} key={id}>
+                  <li className="hamburgerList">
+                    <Link to={path} onClick={closeMenu}>
+                      <p className="hamburgerList__title">{responsiveTitle}</p>
+                    </Link>
+                  </li>
+                </div>
+              ))}
+          </ul>
+        </nav>
+      </StickyNav>
     </div>
   );
 };
