@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
+// ----- Package components -----
 import 'react-js-stickynav/dist/index.css';
 
 // ----- Hamburger-React Icons -----
 import { Sling as Hamburger } from 'hamburger-react';
 import React, { useState } from 'react';
-
-// ----- Package components -----
 import { StickyNav } from 'react-js-stickynav';
 import Fade from 'react-reveal/Fade';
 import { Link, NavLink } from 'react-router-dom';
@@ -26,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <StickyNav length="100">
+      <StickyNav>
         <nav className="navbar">
           {/* ---- NAVBAR ---- */}
           <ul className="navbar__ul">
@@ -44,6 +43,13 @@ const Navbar = () => {
                   </NavLink>
                 ))}
             </div>
+
+            <Link to="/home">
+              <div className="logoContainer">
+                <img src="/assets/images/closeHamburgerMenu.svg" alt="" />
+                <p className="logoContainer__text">(LOGO)</p>
+              </div>
+            </Link>
 
             {/* >> Nav : Right Side */}
             <div className="navbar__ul__container">
@@ -70,7 +76,6 @@ const Navbar = () => {
               hideOutline={true}
             />
           </div>
-
           {/* ----- MOBILE MENU ----- */}
           <ul className={!isOpened ? 'hiddenMenu' : 'showMenu'}>
             {navlinks &&

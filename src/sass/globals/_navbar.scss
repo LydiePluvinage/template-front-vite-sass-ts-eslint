@@ -63,23 +63,6 @@
     }
   }
 
-  // &__hide {
-  //   position: absolute;
-  //   min-width: 100%;
-  //   top: 1.5rem;
-  //   z-index: 3;
-  //   transition: all 2s ease-in-out;
-
-  //   li {
-  //     margin-top: 1rem;
-  //     &:hover {
-  //       color: #ffffff;
-  //     }
-  //   }
-  // }
-
-  // ! hide the dropdown menu
-
   // ! Burger menu position
   .hamburger {
     position: absolute;
@@ -139,6 +122,18 @@
       &:hover {
         color: #ffffff;
       }
+    }
+  }
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &__text {
+      font-size: 1rem;
+      color: white;
+      font-weight: bold;
     }
   }
 }

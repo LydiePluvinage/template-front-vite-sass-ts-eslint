@@ -26,7 +26,7 @@ const navLinks: INavlink[] = [
   },
   {
     id: 4,
-    path: '',
+    path: '/rechercher',
     rightTitle: 'Rechercher',
     dropdown: false,
   },
