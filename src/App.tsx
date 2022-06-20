@@ -12,6 +12,7 @@ import Cart from './pages/Cart';
 import Collection from './pages/Collection';
 import Contact from './pages/Contact';
 import Landing from './pages/Landing';
+import SelectedProduct from './pages/SelectedProduct';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/recherc" element={<Find />} />
           <Route path="/compte" element={<Account />} />
           <Route path="/panier" element={<Cart />} />
+          <Route path="/selectedProduct" element={<SelectedProduct />} />
         </Routes>
         <Footer />
       </HashRouter>
