@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import GoToTop from '../globals/GoToTop';
+
 const SelectedProduct = () => {
   const [color, setColor] = useState('firstPage');
 
@@ -8,6 +10,8 @@ const SelectedProduct = () => {
       <div className={color}>
         <img id="selectedbag" src="/assets/images/bluebag.png" alt="product" />
       </div>
+
+      {/* ICI ON PEUT SE FAIRE UN MAP NON LA TEAM ? */}
       <div className="secondPage">
         <div className="description">
           <h4 className="title">Le sac Océan</h4>
@@ -35,6 +39,7 @@ const SelectedProduct = () => {
           </button>
         </div>
       </div>
+      <GoToTop />
     </div>
   );
 };

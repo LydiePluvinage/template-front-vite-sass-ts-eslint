@@ -1,6 +1,7 @@
 import React from 'react';
 
 import aboutInfo from '../../data/aboutInfo';
+import GoToTop from '../components/globals/GoToTop';
 
 const About = () => {
   return (
@@ -35,6 +36,7 @@ const About = () => {
             </div>
           ))}
       </div>
+      <GoToTop />
     </div>
   );
 };

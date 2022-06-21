@@ -22,7 +22,7 @@ h3 {
   font-size: 80px;
 }
 h4 {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Lora', serif;
   font-size: 20px;
 }
 
@@ -37,6 +37,10 @@ li {
   color: rgb(2, 2, 50);
   text-decoration: none;
   list-style-type: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .navbar__li {
@@ -54,6 +58,16 @@ li {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
   color: rgb(2, 2, 50);
+}
+
+.leftSide__wrapper__title {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+}
+
+.rightSide__wrapper__title {
+  font-family: 'Lora', serif;
+  font-size: 15px;
 }
 
 a:link {

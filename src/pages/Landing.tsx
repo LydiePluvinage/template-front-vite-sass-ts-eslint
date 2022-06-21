@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
+import GoToTop from '../components/globals/GoToTop';
 import Essentials from '../components/homepage/Essentials';
 
 const Landing = () => {
@@ -24,6 +25,7 @@ const Landing = () => {
         muted={true}
       />
       <Essentials />
+      <GoToTop />
     </div>
   );
 };

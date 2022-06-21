@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Essentials = () => {
   return (
     <div className="essentialsPage">
       <div>
         <h1> LES ESSENTIELS </h1>
-        <h2> LA COLLECTION </h2>
+        <Link to="collection">
+          <h2> LA COLLECTION </h2>
+        </Link>
       </div>
       <div className="essentialsPage__container">
         <div className="essentialsPage__firstImage">
