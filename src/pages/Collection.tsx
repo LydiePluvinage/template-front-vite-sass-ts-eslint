@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import allProducts from '../../data/allProducts';
+import GoToTop from '../components/globals/GoToTop';
 
 const Collection = () => {
   return (
@@ -25,6 +26,7 @@ const Collection = () => {
             </div>
           ))}
       </div>
+      <GoToTop />
     </div>
   );
 };

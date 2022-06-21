@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import Footer from '../src/components/globals/Footer';
 import Navbar from '../src/components/globals/Navbar';
+import SelectedProduct from './components/collection/SelectedProduct';
 import Find from './components/globals/Find';
 import About from './pages/About';
 import Account from './pages/Account';
@@ -12,7 +13,6 @@ import Cart from './pages/Cart';
 import Collection from './pages/Collection';
 import Contact from './pages/Contact';
 import Landing from './pages/Landing';
-import SelectedProduct from './pages/SelectedProduct';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/univers" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/recherc" element={<Find />} />
+          <Route path="/Rechercher" element={<Find />} />
           <Route path="/compte" element={<Account />} />
           <Route path="/panier" element={<Cart />} />
           <Route path="/selectedProduct" element={<SelectedProduct />} />

@@ -57,12 +57,11 @@ const Navbar = () => {
 
             {/* >> Nav : Right Side */}
             <div className="navbar__ul__container">
-              {navlinks &&
-                navlinks.map(({ id, rightTitle, path }) => (
-                  <NavLink key={id} to={path}>
-                    <li className="navbar__li">{rightTitle}</li>
-                  </NavLink>
-                ))}
+              {navlinks?.map(({ id, rightTitle, path }) => (
+                <NavLink key={id} to={path}>
+                  <li className="navbar__li">{rightTitle}</li>
+                </NavLink>
+              ))}
             </div>
           </ul>
 

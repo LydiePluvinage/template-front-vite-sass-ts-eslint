@@ -1,5 +1,7 @@
 import React from 'react';
 
+import GoToTop from '../components/globals/GoToTop';
+
 const Account = () => {
   return (
     <div className="account">
@@ -23,6 +25,7 @@ const Account = () => {
           <button type="submit">Envoyer</button>
         </form>
       </div>
+      <GoToTop />
     </div>
   );
 };
