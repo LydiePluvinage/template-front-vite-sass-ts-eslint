@@ -9,9 +9,11 @@
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     margin: auto;
+    overflow: hidden;
     @media screen and (max-width: 700px) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
+
     }
   }
 }
