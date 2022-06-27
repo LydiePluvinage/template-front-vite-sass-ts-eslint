@@ -101,13 +101,7 @@
     padding-top: 2rem;
     top: 0;
     left: 0;
-    background: rgb(0, 50, 84);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 50, 84, 1) 0%,
-      rgba(9, 121, 91, 0.14936396922050066) 49%,
-      rgb(0, 88, 105) 100%
-    );
+    background-color: rgb(183, 212, 232);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.2px);
   }
@@ -116,8 +110,12 @@
   .hamburgerList {
     &__title {
       transition: all 0.3s ease-in-out;
-      @media all and (max-width: 425px) {
-        font-size: 1.5rem;
+      color: #ffffff;
+      @media all and (max-width: 1018px) {
+        font-size: 2rem;
+      }
+      @media all and (max-width: 500px) {
+        font-size: 1.3rem;
       }
       &:hover {
         color: #ffffff;
