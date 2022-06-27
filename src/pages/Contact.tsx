@@ -28,7 +28,6 @@ const Contact = () => {
       <GoToTop />
     </div>
   );
- 
 };
 
 export default Contact;
