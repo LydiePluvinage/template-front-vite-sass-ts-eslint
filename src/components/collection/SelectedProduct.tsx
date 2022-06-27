@@ -1,9 +1,13 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 import GoToTop from '../globals/GoToTop';
 
 const SelectedProduct = () => {
   const [color, setColor] = useState('firstPage');
+  const notify = () => toast('Produit ajouté au panier!');
 
   return (
     <div className="Page">
@@ -34,9 +38,10 @@ const SelectedProduct = () => {
               onClick={() => setColor('firstPageSand')}
             />
           </div>
-          <button type="button" className="buttonCart">
+          <button onClick={notify} type="button" className="buttonCart">
             AJOUTER
           </button>
+          <ToastContainer />
         </div>
       </div>
       <GoToTop />
