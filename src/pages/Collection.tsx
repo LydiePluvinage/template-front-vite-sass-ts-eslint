@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import IProduct from '../interfaces/IProduct';
-
 import GoToTop from '../components/globals/GoToTop';
+import IProduct from '../interfaces/IProduct';
 
 const Collection = () => {
   const [allProducts, setAllProducts] = useState<IProduct[]>();
