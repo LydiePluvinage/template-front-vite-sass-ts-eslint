@@ -6,7 +6,7 @@ const Essentials = () => {
     <div className="essentialsPage">
       <div>
         <Link to="/collection">
-          <h1> LES ESSENTIELS </h1> 
+          <h1> LES ESSENTIELS </h1>
         </Link>
         <Link to="/collection">
           <h2> LA COLLECTION </h2>

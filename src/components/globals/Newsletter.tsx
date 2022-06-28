@@ -1,8 +1,10 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import axios from 'axios';
 import React, { useState } from 'react';
-import INewsletter from '../../interfaces/INewsletter';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import INewsletter from '../../interfaces/INewsletter';
 
 const Newsletter = () => {
   const [email, setEmail] = useState<string>('');
