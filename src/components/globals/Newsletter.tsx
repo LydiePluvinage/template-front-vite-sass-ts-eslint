@@ -6,37 +6,29 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Newsletter = () => {
   const [email, setEmail] = useState<string>('');
-  const [errorMessage, setErrorMessage] = useState<string>();
+  const [errorMessage, setErrorMessage] = useState<string>(
+    `Votre email n'as pas été pris en compte !`,
+  );
   const notify = () => toast('Vous etes bien enregistré à notre newsletter');
 
-
   const postNewsletter = async (e: React.FormEvent<HTMLFormElement>) => {
-    try{
-    // e.preventDefault();
-    
-
-    await axios.post<INewsletter>(
-      'http://localhost:8000/api/newsletters',
-      { email });
-      setEmail("");
-     
-  }
- catch (err) {
-    
-  if (axios.isAxiosError(err)) {
-    // pour gérer les erreurs de type axios
-    if (err.response?.status === 401) {
-      setErrorMessage("Email n'a pas été crée");
+    try {
+      e.preventDefault();
+      await axios.post<INewsletter>('http://localhost:8000/api/newsletters', { email });
+      setEmail('');
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        // pour gérer les erreurs de type axios
+        if (err.response?.status === 401) {
+          setErrorMessage("Email n'a pas été crée");
+        }
+      } else {
+        // pour gérer les erreurs non axios
+        if (err instanceof Error) setErrorMessage(errorMessage);
+      }
     }
-  } else {
-    // pour gérer les erreurs non axios
-    if (err instanceof Error) setErrorMessage(err.message);
-  }
-}
+  };
 
-};
-
-   
   return (
     <div className="newsletter">
       <h2>
@@ -51,7 +43,9 @@ const Newsletter = () => {
           }
           value={email}
         />
-        <button onClick={notify} type="submit">Valider</button>
+        <button onClick={notify} type="submit">
+          Valider
+        </button>
         <ToastContainer />
       </form>
     </div>
