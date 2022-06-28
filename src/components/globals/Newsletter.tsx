@@ -1,15 +1,58 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import INewsletter from '../../interfaces/INewsletter';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Newsletter = () => {
+  const [email, setEmail] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>();
+  const notify = () => toast('Vous etes bien enregistré à notre newsletter');
+
+
+  const postNewsletter = async (e: React.FormEvent<HTMLFormElement>) => {
+    try{
+    // e.preventDefault();
+    
+
+    await axios.post<INewsletter>(
+      'http://localhost:8000/api/newsletters',
+      { email });
+      setEmail("");
+     
+  }
+ catch (err) {
+    
+  if (axios.isAxiosError(err)) {
+    // pour gérer les erreurs de type axios
+    if (err.response?.status === 401) {
+      setErrorMessage("Email n'a pas été crée");
+    }
+  } else {
+    // pour gérer les erreurs non axios
+    if (err instanceof Error) setErrorMessage(err.message);
+  }
+}
+
+};
+
+   
   return (
     <div className="newsletter">
       <h2>
         <span>Newsletter</span>
       </h2>
-      <form>
-        <input type="email" placeholder="entrer votre Email" />
-        <button type="submit">Valider</button>
+      <form onSubmit={postNewsletter}>
+        <input
+          type="email"
+          placeholder="entrez votre Email"
+          onChange={(e: React.FormEvent<HTMLInputElement>) =>
+            setEmail(e.currentTarget.value)
+          }
+          value={email}
+        />
+        <button onClick={notify} type="submit">Valider</button>
+        <ToastContainer />
       </form>
     </div>
   );
