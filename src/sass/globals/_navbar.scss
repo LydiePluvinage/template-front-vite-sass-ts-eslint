@@ -25,7 +25,6 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(10.2px);
     }
-
     &:hover .navbar__dropdown {
       display: block;
     }
@@ -121,7 +120,6 @@
   .hamburgerList {
     &__title {
       transition: all 0.3s ease-in-out;
-      color: #ffffff;
       @media all and (max-width: 1018px) {
         font-size: 2rem;
       }
@@ -129,7 +127,7 @@
         font-size: 1.3rem;
       }
       &:hover {
-        color: #ffffff;
+        color: rgb(2, 2, 50);
       }
     }
   }
