@@ -2,7 +2,7 @@
   &__grid {
     margin-top: 2rem;
     height: auto;
-    width: 85vw;
+    width: 80vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -10,40 +10,49 @@
     grid-row-gap: 5px;
     margin: auto;
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      font-size: 24px;
+      overflow: hidden;
+      width: fit-content;
+    }
+    @media screen and (max-width: 900px) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      font-size: 36px;
+      overflow: hidden;
+      width: fit-content;
     }
     &__firstCard {
+      display: flex;
+      flex-direction: column;
+      padding: 5vh;
       border: solid 0.01em;
       border-color: black;
       background: linear-gradient(#d9e1f9, #e5e9f6);
-      #collectionBags {
+      &__collectionBags {
         object-fit: contain;
-        margin: auto;
-        margin-top: 5vh;
         max-width: 400px;
         height: 300px;
       }
+
       &:hover &__paragraph {
         transition: ease-in-out 1s;
-        margin: 0 auto;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: start;
-        padding-left: 2vw;
-        color: black;
-        letter-spacing: 2px;
-        max-height: 0;
         opacity: 1;
       }
       &__paragraph {
+        gap: 2vh;
         opacity: 0;
-        padding: 3vh;
+        font-weight: 400;
+        font-size: 16px;
+        color: black;
+        max-height: 0;
+        letter-spacing: 2px;
+        padding: 5vh;
         &__price {
-          text-align: end;
           color: rgb(156, 156, 156);
-          padding-right: 1vw;
+          padding-right: 9%;
         }
       }
     }

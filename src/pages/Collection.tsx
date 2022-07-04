@@ -36,7 +36,7 @@ const Collection = () => {
                 {/* link vers la page détaillé du produit sélectionné */}
                 <Link to="/selectedProduct">
                   <img
-                    id="collectionBags"
+                    className="collection__grid__firstCard__collectionBags"
                     src={productImage}
                     alt="Sacs de la marque Brille"
                   />
