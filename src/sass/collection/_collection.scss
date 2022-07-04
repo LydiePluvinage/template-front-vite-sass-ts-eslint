@@ -1,52 +1,56 @@
 .collection {
   &__grid {
     margin-top: 2rem;
-    height: 100vh;
-    width: fit-content;
+    height: auto;
+    width: 85vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     margin: auto;
-    overflow: hidden;
+
     @media screen and (max-width: 700px) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
-
+    }
+    &__firstCard {
+      border: solid 0.01em;
+      border-color: black;
+      background: linear-gradient(#d9e1f9, #e5e9f6);
+      #collectionBags {
+        object-fit: contain;
+        margin: auto;
+        margin-top: 5vh;
+        max-width: 400px;
+        height: 300px;
+      }
+      &:hover &__paragraph {
+        transition: ease-in-out 1s;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: start;
+        padding-left: 2vw;
+        color: black;
+        letter-spacing: 2px;
+        max-height: 0;
+        opacity: 1;
+      }
+      &__paragraph {
+        opacity: 0;
+        padding: 3vh;
+        &__price {
+          text-align: end;
+          color: rgb(156, 156, 156);
+          padding-right: 1vw;
+        }
+      }
     }
   }
 }
 
-.firstCard {
-  border: solid 0.01em;
-  border-color: black;
-  background: linear-gradient(#d9e1f9, #e5e9f6);
-
-  .paragraph {
-    opacity: 0;
-    padding: 3vh;
-  }
-  .price {
-    text-align: end;
-    color: rgb(156, 156, 156);
-    padding-right: 1vw;
-  }
-
-  &:hover .paragraph {
-    transition: ease-in 0.5s;
-    margin: 0 auto;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: start;
-    padding-left: 2vw;
-    color: black;
-    letter-spacing: 2px;
-    max-height: 0;
-    opacity: 1;
-  }
-}
-
+// Code à ne pas effacer, pour l'ancienne condition ternaire.
 .secondCard {
   border: solid 0.01em;
   border-color: black;
@@ -63,7 +67,6 @@
   }
 
   &:hover .paragraph {
-    transition: ease-in 0.5s;
     margin: 0 auto;
     font-weight: 400;
     font-size: 14px;
@@ -74,10 +77,4 @@
     max-height: 0;
     opacity: 1;
   }
-}
-#collectionBags {
-  object-fit: cover;
-  margin: 25%;
-  max-width: 60%;
-  height: auto;
 }
