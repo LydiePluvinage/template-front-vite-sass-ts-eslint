@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   //Change navbar background-color when scrolling
   const changeColor = () => {
-    window.scrollY >= 90 ? setColor(true) : setColor(false);
+    window.scrollY >= 20 ? setColor(true) : setColor(false);
   };
 
   window.addEventListener('scroll', changeColor);

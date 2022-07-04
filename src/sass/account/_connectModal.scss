@@ -1,0 +1,10 @@
+.connectModal {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    width: 80%;
+  }
+}
