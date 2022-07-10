@@ -29,7 +29,6 @@ const Login = () => {
           withCredentials: true,
         },
       );
-      console.log(document.cookie);
       setErrorMessage('');
       setId(data.id);
       setFirstname(data.firstname);
