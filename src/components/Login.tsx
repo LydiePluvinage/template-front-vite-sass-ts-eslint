@@ -21,11 +21,20 @@ const Login = () => {
     // indispensable quand on veut utiliser async/await dans un useEffect
     try {
       e.preventDefault();
-      axios.defaults.withCredentials = true;
       const { data } = await axios.post<IUser>(
         `${import.meta.env.VITE_API_URL}/api/login`,
         { email, password },
+        {
+          method: 'POST', // test
+          // for cookies
+          withCredentials: true,
+          headers: {
+            Accept: 'application/json', // test
+            'Content-Type': 'application/json', // test
+          },
+        },
       );
+      console.log(document.cookie);
       setErrorMessage('');
       setId(data.id);
       setFirstname(data.firstname);
