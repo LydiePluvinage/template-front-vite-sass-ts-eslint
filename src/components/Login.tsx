@@ -22,7 +22,7 @@ const Login = () => {
     try {
       e.preventDefault();
       const { data } = await axios.post<IUser>(
-        'http://localhost:8000/api/login',
+        `${import.meta.env.VITE_API_URL}/api/login`,
         { email, password },
         {
           method: 'POST',

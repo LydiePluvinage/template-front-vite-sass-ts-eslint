@@ -1,7 +1,7 @@
 import './App.scss';
 
 import React, { useContext } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import AddressList from './components/AddressList';
 import Home from './components/Home';
@@ -20,7 +20,9 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/address">Adresses</Link>
           <Link to="/click">Click</Link>
-          {admin === true && <a href="http://localhost:3001/">Admin panel</a>}
+          {admin === true && (
+            <a href={`${import.meta.env.VITE_ADMIN_URL}`}>Admin panel</a>
+          )}
           {id === 0 ? (
             <Link to="/login">Se connecter</Link>
           ) : (

@@ -16,7 +16,7 @@ const AddressList = ({ onlyMine = false }: AddressListProps) => {
   useEffect(() => {
     const getAddresses = async () => {
       // indispensable quand on veut utiliser async/await dans un useEffect
-      let url: string = 'http://localhost:8000/api/';
+      let url: string = `${import.meta.env.VITE_API_URL}/api/`;
       if (onlyMine) {
         url += `users/${id}/addresses`;
       } else {
