@@ -21,16 +21,10 @@ const Login = () => {
     // indispensable quand on veut utiliser async/await dans un useEffect
     try {
       e.preventDefault();
+      axios.defaults.withCredentials = true;
       const { data } = await axios.post<IUser>(
         `${import.meta.env.VITE_API_URL}/api/login`,
         { email, password },
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          withCredentials: true,
-        },
       );
       setErrorMessage('');
       setId(data.id);
